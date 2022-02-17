@@ -10,12 +10,12 @@ on:
 defaults:
   run:
     working-directory: app
-#
+#  github.event_name == 'pull_request'
 jobs:
   build-android:
     name: Build Android
     runs-on: ubuntu-20.04
-    if: contains(github.commit.message, '[e2e]')
+    if: ${{ contains(github.commit.message, '[e2e]') }}
     steps:
       - uses: actions/checkout@v2
 
