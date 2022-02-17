@@ -15,7 +15,10 @@ jobs:
   build-android:
     name: Build Android
     runs-on: ubuntu-20.04
+    if: contains(github.commit.message, '[e2e]')
     steps:
       - uses: actions/checkout@v2
 
       - run: echo xddd
+
+      - run: git log -1
