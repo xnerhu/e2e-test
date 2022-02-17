@@ -1,11 +1,11 @@
 name: Mobile app
 
 on:
-  # push:
-  #   branches:
-  # pull_request:
-  #   branches: [main]
-  # workflow_dispatch:
+  push:
+    branches:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 #  github.event_name == 'pull_requestw'ewexd
 jobs:
