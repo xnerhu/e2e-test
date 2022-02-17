@@ -7,12 +7,12 @@ on:
     branches: [main]
   workflow_dispatch:
 
-#  github.event_name == 'pull_request'
+#  github.event_name == 'pull_request'ewe
 jobs:
   build-android:
     name: Build Android
     runs-on: ubuntu-20.04
-    if: ${{ contains(github.event.head_commit.message, '[e2e]') }}
+    if: ${{ contains(github.event.head_commit.message, '[e2e]') || github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v2
 
