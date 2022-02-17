@@ -10,7 +10,7 @@ on:
 defaults:
   run:
     working-directory: app
-#  github.event_name == 'pull_request'
+#  github.event_name == 'pull_request' xd
 jobs:
   build-android:
     name: Build Android
