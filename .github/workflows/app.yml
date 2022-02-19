@@ -7,7 +7,7 @@ on:
     branches: [main]
   workflow_dispatch:
 #f
-#  github.event_name == 'pull_requestw'ewexd
+#  github.event_name == 'pudl_requestw'ewexd
 jobs:
   build-android:
     name: Build Android
