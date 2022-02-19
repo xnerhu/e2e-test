@@ -13,14 +13,14 @@ jobs:
     name: Build Android
     runs-on: ubuntu-20.04
     env:
-      Xd: true
+      Xd: ${{ contains(github.event.head_commit.message, '[e2e]') }}
 
     steps:
       - uses: actions/checkout@v2
 
       - run: git log -1
 
-      - run: echo $COMMIT_MESSAGE
+      - run: echo "${{ env.Xd }}"
 
       - run: echo "xddddd"
         if: ${{ env.Xd == 'true' }}
