@@ -13,7 +13,7 @@ jobs:
     name: Build Android
     runs-on: ubuntu-20.04
     env:
-      Xd: ${{ contains(github.event.head_commit.message, '[e2e]') }}
+      Xd: ${{ contains(github.event.head_commit.message, '[e2e]') || github.ref_protected || github.ref == 'refs/heads/main' }}
 
     steps:
       - uses: actions/checkout@v2
