@@ -23,6 +23,6 @@ jobs:
       - run: echo $COMMIT_MESSAGE
 
       - run: echo "xddddd"
-        if: ${{ contains(github.event.head_commit.message, '[e2e]') == 'true' || github.ref == 'refs/heads/main' }}
+        if: contains(github.event.head_commit.message, '[e2e]')
 
       # - run: echo "${{ github.event.head_commit.message }}""
