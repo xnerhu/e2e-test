@@ -7,7 +7,7 @@ on:
     branches: [main]
   workflow_dispatch:
 #f
-#  github.event_name == 'pudl_requestw'ewexxdddd
+#  github.event_name == 'pudl_requestw'edwexxdddd
 jobs:
   build-android:
     name: Build Android
@@ -21,6 +21,6 @@ jobs:
       - run: echo "${{ github.event_name }}"
 
       - run: echo "xddddd"
-        if: ${{ contains(github.event.head_commit.message, '[e2e]') || github.ref == 'refs/heads/main' }}
+        if: ${{ contains(github.event.head_commit.message, '[e2e]') == true || github.ref == 'refs/heads/main' }}
 
       # - run: echo "${{ github.event.head_commit.message }}""
