@@ -7,19 +7,19 @@ on:
     branches: [main]
   workflow_dispatch:
 #f
-#  github.event_name == 'pudl_requestw'edwexxrwddddxd
+#  github.event_name == 'pudl_requestw'
 jobs:
   build-android:
     name: Build Android
-    runs-on: macos
+    runs-on: [macos]
     # env:
     #   Xd: ${{ contains(github.event.head_commit.message, '[e2e]') || github.ref_protected || github.ref == 'refs/heads/main' }}
 
     steps:
       - uses: actions/checkout@v2
 
-    - name: Setup a local Compose stack
-      run: docker-compose up --build -d
+      - name: Setup a local Compose stack
+        run: docker-compose up --build -d
 
     # - name: Install VirtualBox
     #   run: brew install --cask virtualbox
