@@ -11,7 +11,7 @@ on:
 jobs:
   build-android:
     name: Build Android
-    runs-on: [macos]
+    runs-on: macos-latest
     # env:
     #   Xd: ${{ contains(github.event.head_commit.message, '[e2e]') || github.ref_protected || github.ref == 'refs/heads/main' }}
 
